@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div>
+      <img id="currentPhoto" src="images/photo1.jpg" />
+    </div>
+    <div class="button-box">
+      <button>ptev</button>
+	  <button onclick ="showNextPhoto()">next</button>
+    </div>
+
+    <script>
+	let photosCount = 4
+	let currePhotoIndex = 1
+	let element = document.getElementById("currentPhoto")
+	
+	function showNextPhoto () {
+	currentPhotoIndex++
+	if (photosCount < currentPhotoIndex) currentPhotoIndex = 1
+	element.src = "image/photo" + currtntPhotoIndex + ".jpg"
+	}
+	
+	function showPrevPhoto () {
+	currentPhotoIndex--
+	if (currtntPhotoIndex === 0) currentPhotoIntex = 4
+	element.src = "images/photo" +currentPhotoIntex +".jpg"
+	}
+	</script>
+  </body>
+</html>
